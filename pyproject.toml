@@ -11,6 +11,9 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = []
 
+[tool.setuptools.packages.find]
+where = ["src"]
+
 [project.optional-dependencies]
 dev = ["pytest", "ruff", "mypy"]
 
