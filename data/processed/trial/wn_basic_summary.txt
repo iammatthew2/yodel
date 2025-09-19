@@ -1,0 +1,46 @@
+=== WordNet Basic Structure Summary ===
+POS noun | synsets:  84956 | lemma_tokens: 151561 | avg_lemmas_per_synset: 1.78
+POS verb | synsets:  13830 | lemma_tokens:  25144 | avg_lemmas_per_synset: 1.82
+POS adj  | synsets:  18222 | lemma_tokens:  30174 | avg_lemmas_per_synset: 1.66
+POS adv  | synsets:   3622 | lemma_tokens:   5599 | avg_lemmas_per_synset: 1.55
+
+Total distinct pointer symbols: 26
+Top 12 pointer symbols:
+  ~   93446
+  @   93446
+  +   74646
+  &   21458
+  #m  12296
+  %m  12296
+  %p  9202
+  #p  9202
+  ~i  8614
+  @i  8614
+  ;u  8264
+  -u  8264
+
+Per-POS pointer symbol top 5:
+  noun:
+    ~   79586
+    @   79586
+    +   37223
+    #m  12296
+    %m  12296
+  verb:
+    +   23064
+    @   13860
+    ~   13860
+    ;u  2777
+    $   1732
+  adj:
+    &   21458
+    +   14350
+    \   4820
+    !   4030
+    ^   2703
+  adv:
+    \   3252
+    !   712
+    ;u  102
+    ;c  41
+    +   9
