@@ -130,9 +130,9 @@ def main(argv=None):
     verbs = sorted(filtered.keys())
     if args.limit:
         verbs = verbs[:args.limit]
-    print(f"verbs with ≥{args.min_nouns} noun matches: {len(filtered)}\n")
+    print(f"verbs with >={args.min_nouns} noun matches: {len(filtered)}\n")
     for v in verbs:
-        print(f"{v} → {', '.join(filtered[v])}")
+        print(f"{v} -> {', '.join(filtered[v])}")
 
 
 if __name__ == '__main__':  # pragma: no cover

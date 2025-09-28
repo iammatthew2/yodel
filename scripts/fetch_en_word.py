@@ -16,7 +16,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import zipfile
-from datetime import datetime
+from datetime import datetime, UTC
 from pathlib import Path
 import sys
 import urllib.request
@@ -48,7 +48,7 @@ def main(argv: list[str] | None = None) -> int:
 
     raw_dir = Path(args.out_dir)
     raw_dir.mkdir(parents=True, exist_ok=True)
-    date_tag = datetime.utcnow().strftime("%Y%m%d")
+    date_tag = datetime.now(UTC).strftime("%Y%m%d")
     base_name = Path(args.url).name.replace('.zip', '')
     archive_path = raw_dir / f"{base_name}_{date_tag}.zip"
 
@@ -59,7 +59,7 @@ def main(argv: list[str] | None = None) -> int:
         data = download(args.url)
         digest = sha256_bytes(data)[:16]
         archive_path.write_bytes(data)
-        print(f"Saved {archive_path} (sha256 {digest}…)")
+        print(f"Saved {archive_path} (sha256 {digest}...)")
 
     # Extract (always) into sibling directory without .zip suffix
     extract_dir = archive_path.with_suffix("")
